@@ -1,75 +1,41 @@
-import 'dart:async';
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:flutter_toolbox/screens/home.dart';
+import 'package:flutter_toolbox/widgets/fade_page_route.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      title: 'Reading and Writing Files',
-      home: MyApp(),
-    ),
-  );
-}
+import 'configs/AppColors.dart';
 
-class MyApp extends StatefulWidget {
-  @override
-  _AppState createState() => _AppState();
-}
+void main() => runApp(MyApp());
 
-class _AppState extends State<MyApp> {
-  String data;
-
-  Future<String> get _localPath async {
-    final directory = await getApplicationDocumentsDirectory();
-    print(directory.path);
-    return directory.path;
-  }
-
-  Future<File> get _localFile async {
-    final path = await _localPath;
-    return File('$path/counter.txt');
-  }
-
-  Future<String> readContent() async {
-    try {
-      final file = await _localFile;
-      // Read the file
-      String contents = await file.readAsString();
-      // Returning the contents of the file
-      return contents;
-    } catch (e) {
-      // If encountering an error, return
-      return 'Error!';
-    }
-  }
-
-  Future<File> writeContent() async {
-    final file = await _localFile;
-    // Write the file
-    return file.writeAsString('This text was written and read from ' + file.path + '/counter.txt');
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    writeContent();
-    readContent().then((String value) {
-      setState(() {
-        data = value;
-      });
-    });
-  }
-
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Reading and Writing data')),
-      body: Center(
-        child: Text(
-          'Data read from a file: \n $data',
-        ),
+    return MaterialApp(
+      color: Colors.white,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        fontFamily: 'CircularStd',
+        textTheme: Theme.of(context).textTheme.apply(displayColor: AppColors.black),
+        scaffoldBackgroundColor: AppColors.lightGrey,
+        primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: _getRoute,
     );
+  }
+
+  Route _getRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case "/":
+        return FadeRoute(page: Home());
+
+      // case '/pokedex':
+      //   return FadeRoute(page: Pokedex());
+
+      // case '/pokemon-info':
+      //   return FadeRoute(page: PokemonInfo());
+
+      default:
+        return null;
+    }
   }
 }
