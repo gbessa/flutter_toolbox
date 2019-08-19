@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/widgets/custom_container.dart';
-import 'package:flutter_toolbox/widgets/fancy_button.dart';
+import 'package:flutter_toolbox/widgets/new_widget.dart';
+import 'package:flutter_toolbox/widgets/screen_widget.dart';
 import 'package:flutter_toolbox/widgets/search_bar.dart';
 
 class Home extends StatefulWidget {
@@ -31,12 +32,36 @@ class _HomeState extends State<Home> {
         SearchBar(),
         SizedBox(height: 42),
         FloatingActionButton.extended(
+          heroTag: "search",
           onPressed: search(),
           label: Text('Search'),
           icon: Icon(Icons.search),
           backgroundColor: Colors.blueAccent,
         ),
-        FancyButton(onPressed: null,)
+        SizedBox(height: 8.0),
+        FloatingActionButton.extended(
+          heroTag: "new_widget",
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => NewWidget()),
+            );
+          },
+          label: Text('New Widget'),
+          backgroundColor: Colors.blueGrey,
+        ),
+        SizedBox(height: 8.0),
+        FloatingActionButton.extended(
+          heroTag: "screen_widget",
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ScreenWidget()),
+            );
+          },
+          label: Text('Screen Widget'),
+          backgroundColor: Colors.blueGrey,
+        )
       ],
     );
   }
