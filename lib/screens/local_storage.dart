@@ -7,17 +7,17 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Reading and Writing Files',
-      home: MyApp(),
+      home: LocalStorageScreen(),
     ),
   );
 }
 
-class MyApp extends StatefulWidget {
+class LocalStorageScreen extends StatefulWidget {
   @override
   _AppState createState() => _AppState();
 }
 
-class _AppState extends State<MyApp> {
+class _AppState extends State<LocalStorageScreen> {
   String data;
 
   Future<String> get _localPath async {

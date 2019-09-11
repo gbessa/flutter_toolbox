@@ -47,3 +47,37 @@
 // 17. Hero
 //    Hero transitions are a pattern in UI. This is the flutter solution.
 //    Its for exmaple, make an image as a hero in a page transition
+
+// 18. CustomPaint
+//    To customize default Material Elements.
+//    Use de canvas.xxx do draw the new element
+
+// 19. Tooltip
+//    Wrap the widget with the tooltip widget. It provides acessibility to the interface.
+//    It apears with the long tap. Some widgets as IconButtom already provides tooltip
+
+// 20. FittedBox
+//    Used to fit a widget inside another
+
+// 21. LayoutBuilder
+//    Define behavior for the layout build based on constraints
+
+// 22. AbsorbPointer
+//    Wrap the widgets with the AbsorbPointer to manage easely the activation of a butom onPressed for example.
+
+// 23. Transform
+//    Rotate, scale, translate widgets.
+
+// 24. BackdropFilter
+// 
+
+// 25. Align
+//    To place widgets in a defined area of the parent widget.
+
+// 26. Positioned
+//    
+
+// 27. AnimatedBuilder
+//    
+
+// 28. Dismissible
