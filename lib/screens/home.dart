@@ -20,8 +20,16 @@ class _HomeState extends State<Home> {
         child: Column(
       mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        SizedBox(height: 30),
-        Padding(
+        Row(children: <Widget>[
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child:
+              Image(
+                image: AssetImage('assets/images/flutter.png'),
+                height:80,
+              ),
+          ),
+          Padding(
             padding: EdgeInsets.symmetric(horizontal: 28),
             child: Text(
               "Welcome to the\nFlutter Tools",
@@ -31,6 +39,9 @@ class _HomeState extends State<Home> {
                 fontWeight: FontWeight.w900,
               ),
             )),
+         ],
+        ),
+        
         SizedBox(height: 8.0),
         SearchBar(),
         SizedBox(height: 8.0),
