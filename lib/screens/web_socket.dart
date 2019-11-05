@@ -3,7 +3,14 @@ import 'package:web_socket_channel/io.dart';
 import 'package:flutter/material.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
-void main() => runApp(WebSocketScreen());
+void main() {
+  runApp(
+    MaterialApp(
+      title: 'Web Socket',
+      home: WebSocketScreen(),
+    ),
+  );
+}
 
 class WebSocketScreen extends StatelessWidget {
   @override
