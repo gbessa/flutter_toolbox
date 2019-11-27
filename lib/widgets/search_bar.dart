@@ -36,8 +36,16 @@ class SearchBar extends StatelessWidget {
               ),
             ),
           ),
+          RaisedButton(
+            onPressed: search(),
+            child: Text('Search'),
+            color: Colors.blueGrey,
+            splashColor: Colors.blue,
+          ),
         ],
       ),
     );
   }
 }
+
+search() {}

@@ -15,7 +15,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         fontFamily: 'CircularStd',
-        textTheme: Theme.of(context).textTheme.apply(displayColor: AppColors.black),
+        textTheme:
+            Theme.of(context).textTheme.apply(displayColor: AppColors.black),
         scaffoldBackgroundColor: AppColors.lightGrey,
         primarySwatch: Colors.blue,
       ),
