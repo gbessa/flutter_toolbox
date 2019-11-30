@@ -1,16 +1,16 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/increment/increment_widget.dart';
+import 'package:flutter_toolbox/screens/bloc_screen.dart';
 import 'package:flutter_toolbox/screens/clones/clone_apps.dart';
-import 'package:flutter_toolbox/screens/utils/take_picture.dart';
-import 'package:flutter_toolbox/screens/utils/web_socket.dart';
+import 'package:flutter_toolbox/screens/utils/utils.dart';
 import 'package:flutter_toolbox/widgets/new_widget.dart';
 import 'package:flutter_toolbox/widgets/screen_widget.dart';
 import 'package:flutter_toolbox/widgets/search_bar.dart';
 
 import 'course/course_apps.dart';
-import 'utils/http_fetch.dart';
-import 'utils/local_storage.dart';
+import 'ideas/ideas.dart';
 import 'my_card.dart';
 
 class Home extends StatefulWidget {
@@ -37,6 +37,18 @@ class _HomeState extends State<Home> {
         SizedBox(height: 8.0),
         SearchBar(),
         SizedBox(height: 8.0),
+        RaisedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => MyCardScreen()),
+            );
+          },
+          child: Text('My Card'),
+          color: Colors.blue,
+          splashColor: Colors.blue,
+        ),
+        SizedBox(height: 8.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -49,7 +61,7 @@ class _HomeState extends State<Home> {
               },
               child: Text('Course Apps'),
               color: Colors.teal,
-              splashColor: Colors.blue,
+              splashColor: Colors.greenAccent,
             ),
             RaisedButton(
               onPressed: () {
@@ -66,10 +78,10 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MyCardScreen()),
+                  MaterialPageRoute(builder: (context) => UtilsScreen()),
                 );
               },
-              child: Text('My Card'),
+              child: Text('Utils'),
               color: Colors.blue,
               splashColor: Colors.blue,
             ),
@@ -83,58 +95,26 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LocalStorageScreen()),
+                  MaterialPageRoute(builder: (context) => IdeasScreen()),
                 );
               },
-              child: Text('Local Storage'),
-              color: Colors.blueGrey,
+              child: Text('Ideas'),
+              color: Colors.lightBlue,
               splashColor: Colors.blue,
             ),
             RaisedButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) => TakePictureScreen(
-                            camera: null,
-                          )),
+                  MaterialPageRoute(builder: (context) => BlocScreen()),
                 );
               },
-              child: Text('Take Picture'),
-              color: Colors.yellowAccent,
-              splashColor: Colors.blue,
+              child: Text('Bloc'),
+              color: Colors.orange,
+              splashColor: Colors.orangeAccent,
             ),
           ],
         ),
-        SizedBox(height: 8.0),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => WebSocketScreen()),
-                );
-              },
-              child: Text('Web Socket'),
-              color: Colors.redAccent,
-              splashColor: Colors.red,
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HttpFetchScreen()),
-                );
-              },
-              child: Text('Http Fetch'),
-              color: Colors.amberAccent,
-              splashColor: Colors.amber,
-            ),
-          ],
-        ),
-        SizedBox(height: 8.0),
         SizedBox(height: 8.0),
         AbsorbPointer(
           absorbing: false, //true to deactivate the poiter events

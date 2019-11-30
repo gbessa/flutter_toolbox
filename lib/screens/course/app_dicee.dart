@@ -1,18 +1,10 @@
+//Source and credits: https://github.com/londonappbrewery
+
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 void main() {
-  runApp(
-    MaterialApp(
-      title: 'Dicee',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.red,
-        ),
-        body: AppDiceeScreen(),
-      ),
-    ),
-  );
+  runApp(AppDiceeScreen());
 }
 
 class AppDiceeScreen extends StatefulWidget {
@@ -33,26 +25,32 @@ class _AppDiceeScreenState extends State<AppDiceeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                _rollDices();
-              },
-              child: Image.asset('assets/images/dice$leftDiceNumber.png'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Dicee'),
+      ),
+      backgroundColor: Colors.red,
+      body: Center(
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: FlatButton(
+                onPressed: () {
+                  _rollDices();
+                },
+                child: Image.asset('assets/images/dice$leftDiceNumber.png'),
+              ),
             ),
-          ),
-          Expanded(
-            child: FlatButton(
-              onPressed: () {
-                _rollDices();
-              },
-              child: Image.asset('assets/images/dice$rightDiceNumber.png'),
-            ),
-          )
-        ],
+            Expanded(
+              child: FlatButton(
+                onPressed: () {
+                  _rollDices();
+                },
+                child: Image.asset('assets/images/dice$rightDiceNumber.png'),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

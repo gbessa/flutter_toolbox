@@ -1,3 +1,5 @@
+//Source and credits: https://github.com/themaaz32/design_clone
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(CloneMessengerScreen());

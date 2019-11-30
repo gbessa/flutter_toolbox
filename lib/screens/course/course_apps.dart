@@ -14,51 +14,49 @@ void main() {
 class CourseAppsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-          appBar: AppBar(title: const Text('App from courses')),
-          body: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AppDiceeScreen()),
-                    );
-                  },
-                  child: Text('Dicee'),
-                  color: Colors.red,
-                  splashColor: Colors.redAccent,
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => XylophoneScreen()),
-                    );
-                  },
-                  child: Text('Xylophone'),
-                  color: Colors.blue,
-                  splashColor: Colors.blueGrey,
-                ),
-                RaisedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Quizzler()),
-                    );
-                  },
-                  child: Text('Quiz'),
-                  color: Colors.yellow,
-                  splashColor: Colors.blueGrey,
-                ),
-              ],
+    return Scaffold(
+      appBar: AppBar(title: const Text('App from courses')),
+      backgroundColor: Colors.greenAccent,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AppDiceeScreen()),
+                );
+              },
+              child: Text('Dicee'),
+              color: Colors.red,
+              splashColor: Colors.redAccent,
             ),
-          ),
-          backgroundColor: Colors.teal),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => XylophoneScreen()),
+                );
+              },
+              child: Text('Xylophone'),
+              color: Colors.blue,
+              splashColor: Colors.blueGrey,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Quizzler()),
+                );
+              },
+              child: Text('Quiz'),
+              color: Colors.yellow,
+              splashColor: Colors.blueGrey,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
