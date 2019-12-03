@@ -16,12 +16,9 @@ class WebSocketScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final title = 'WebSocket Demo';
-    return MaterialApp(
+    return MyHomePage(
       title: title,
-      home: MyHomePage(
-        title: title,
-        channel: IOWebSocketChannel.connect('ws://echo.websocket.org'),
-      ),
+      channel: IOWebSocketChannel.connect('ws://echo.websocket.org'),
     );
   }
 }
