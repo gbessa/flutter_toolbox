@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/screens/clones/clone_messenger.dart';
+import 'package:flutter_toolbox/screens/course/app_BMI_calculator.dart';
 
+import 'app_destini.dart';
 import 'app_dicee.dart';
 import 'app_quiz.dart';
 import 'app_xylophone.dart';
@@ -52,6 +54,36 @@ class CourseAppsScreen extends StatelessWidget {
               },
               child: Text('Quiz'),
               color: Colors.yellow,
+              splashColor: Colors.blueGrey,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Destini()),
+                );
+              },
+              child: Text(
+                'Destini',
+                style: TextStyle(
+                    color: Colors.white70, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.black,
+              splashColor: Colors.blueGrey,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BMICalculator()),
+                );
+              },
+              child: Text(
+                'BMI Calculator',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.purple,
               splashColor: Colors.blueGrey,
             ),
           ],

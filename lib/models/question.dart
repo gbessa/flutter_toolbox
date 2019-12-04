@@ -2,10 +2,7 @@ class Question {
   String _question;
   bool _answer;
 
-  Question(String q, bool a) {
-    _question = q;
-    _answer = a;
-  }
+  Question(this._question, this._answer) {}
 
   String getQuestion() {
     return _question;

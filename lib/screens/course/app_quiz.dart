@@ -5,20 +5,19 @@ import 'package:flutter_toolbox/models/question.dart';
 import 'dart:math';
 
 import 'package:flutter_toolbox/models/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 void main() => runApp(Quizzler());
 
 class Quizzler extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        backgroundColor: Colors.grey.shade900,
-        body: SafeArea(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 10.0),
-            child: QuizPage(),
-          ),
+    return Scaffold(
+      backgroundColor: Colors.grey.shade900,
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: QuizPage(),
         ),
       ),
     );
@@ -39,7 +38,15 @@ class _QuizPageState extends State<QuizPage> {
     (answer == quizBrain.getAnswer())
         ? scoreKeeper.add(Icon(Icons.check, color: Colors.green))
         : scoreKeeper.add(Icon(Icons.close, color: Colors.red));
-    quizBrain.nextQuestion();
+    if (quizBrain.nextQuestion() == false) {
+      Alert(
+        context: context,
+        title: 'Finished!',
+        desc: 'You\'ve reached the end of the quiz.',
+      ).show();
+      quizBrain.reset();
+      scoreKeeper.clear();
+    }
   }
 
   @override

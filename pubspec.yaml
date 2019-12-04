@@ -25,6 +25,7 @@ dependencies:
   web_socket_channel:
   bloc_pattern: ^2.5.1
   rxdart: ^0.22.6
+  rflutter_alert: ^1.0.3
     
 
   # The following adds the Cupertino Icons font to your application.
