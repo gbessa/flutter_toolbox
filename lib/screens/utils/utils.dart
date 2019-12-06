@@ -16,6 +16,12 @@ class UtilsScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(title: const Text('Utils')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Icon(Icons.backspace),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

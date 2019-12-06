@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/increment/increment_widget.dart';
 import 'package:flutter_toolbox/screens/bloc_screen.dart';
 import 'package:flutter_toolbox/screens/clones/clone_apps.dart';
 import 'package:flutter_toolbox/screens/utils/utils.dart';
@@ -54,10 +53,7 @@ class _HomeState extends State<Home> {
           children: <Widget>[
             RaisedButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => CourseAppsScreen()),
-                );
+                Navigator.pushNamed(context, '/course');
               },
               child: Text('Course Apps'),
               color: Colors.teal,
@@ -65,9 +61,9 @@ class _HomeState extends State<Home> {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(builder: (context) => CloneAppsScreen()),
+                  '/clone',
                 );
               },
               child: Text('Clone Apps'),
@@ -76,9 +72,9 @@ class _HomeState extends State<Home> {
             ),
             RaisedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(builder: (context) => UtilsScreen()),
+                  '/utils',
                 );
               },
               child: Text('Utils'),

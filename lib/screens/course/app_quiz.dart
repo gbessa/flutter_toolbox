@@ -34,6 +34,30 @@ class _QuizPageState extends State<QuizPage> {
 
   QuizBrain quizBrain = QuizBrain();
 
+  Color questionColor = Colors.white;
+
+  void updateQuestionColor() {
+    switch (quizBrain.getDifficulty()) {
+      case QuestionDifficulty.EASY:
+        {
+          questionColor = Colors.blue;
+          break;
+        }
+
+      case QuestionDifficulty.MEDIUM:
+        {
+          questionColor = Colors.yellow;
+          break;
+        }
+
+      case QuestionDifficulty.HARD:
+        {
+          questionColor = Colors.red;
+          break;
+        }
+    }
+  }
+
   void answerQuestion(bool answer) {
     (answer == quizBrain.getAnswer())
         ? scoreKeeper.add(Icon(Icons.check, color: Colors.green))
@@ -51,6 +75,8 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
+    updateQuestionColor();
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -65,7 +91,7 @@ class _QuizPageState extends State<QuizPage> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
-                  color: Colors.white,
+                  color: questionColor,
                 ),
               ),
             ),

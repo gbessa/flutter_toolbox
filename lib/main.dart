@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/screens/clones/clone_apps.dart';
+import 'package:flutter_toolbox/screens/course/course_apps.dart';
 import 'package:flutter_toolbox/screens/home.dart';
+import 'package:flutter_toolbox/screens/utils/utils.dart';
 import 'package:flutter_toolbox/widgets/fade_page_route.dart';
 
 import 'configs/AppColors.dart';
@@ -11,6 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/utils': (context) => UtilsScreen(),
+        '/course': (context) => CourseAppsScreen(),
+        '/clone': (context) => CloneAppsScreen(),
+        '/utils': (context) => UtilsScreen(),
+      },
       color: Colors.white,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -20,23 +31,6 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.lightGrey,
         primarySwatch: Colors.blue,
       ),
-      onGenerateRoute: _getRoute,
     );
-  }
-
-  Route _getRoute(RouteSettings settings) {
-    switch (settings.name) {
-      case "/":
-        return FadeRoute(page: Home());
-
-      // case '/pokedex':
-      //   return FadeRoute(page: Pokedex());
-
-      // case '/pokemon-info':
-      //   return FadeRoute(page: PokemonInfo());
-
-      default:
-        return null;
-    }
   }
 }
