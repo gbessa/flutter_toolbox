@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/screens/clones/clone_apps.dart';
-import 'package:flutter_toolbox/screens/course/course_apps.dart';
+import 'package:flutter_toolbox/clones/clone_apps.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/course_apps.dart';
 import 'package:flutter_toolbox/screens/home.dart';
-import 'package:flutter_toolbox/screens/utils/utils.dart';
-import 'package:flutter_toolbox/widgets/fade_page_route.dart';
+import 'package:flutter_toolbox/utils/utils.dart';
 
 import 'configs/AppColors.dart';
 

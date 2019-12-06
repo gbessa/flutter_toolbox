@@ -1,15 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/ideas/ideas.dart';
 import 'package:flutter_toolbox/screens/bloc_screen.dart';
-import 'package:flutter_toolbox/screens/clones/clone_apps.dart';
-import 'package:flutter_toolbox/screens/utils/utils.dart';
 import 'package:flutter_toolbox/widgets/new_widget.dart';
 import 'package:flutter_toolbox/widgets/screen_widget.dart';
 import 'package:flutter_toolbox/widgets/search_bar.dart';
 
-import 'course/course_apps.dart';
-import 'ideas/ideas.dart';
 import 'my_card.dart';
 
 class Home extends StatefulWidget {

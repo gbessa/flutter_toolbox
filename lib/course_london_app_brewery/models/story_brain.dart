@@ -1,4 +1,4 @@
-import 'package:flutter_toolbox/models/story.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/models/story.dart';
 
 class StoryBrain {
   int _storyNumber = 0;

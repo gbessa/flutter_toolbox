@@ -1,10 +1,9 @@
 //Source and credits: https://github.com/londonappbrewery
 
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/models/question.dart';
-import 'dart:math';
+import 'package:flutter_toolbox/course_london_app_brewery/models/question.dart';
 
-import 'package:flutter_toolbox/models/quiz_brain.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/models/quiz_brain.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 void main() => runApp(Quizzler());

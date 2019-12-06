@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/screens/course/BMI_calculator_brain.dart';
-import 'package:flutter_toolbox/screens/course/BMI_results_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'constants.dart';
+import '../constants.dart';
+import 'app_BMI_calculator_brain.dart';
+import 'app_BMI_results_page.dart';
 
 class InputPage extends StatefulWidget {
   @override

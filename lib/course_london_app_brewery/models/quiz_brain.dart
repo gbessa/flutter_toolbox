@@ -1,4 +1,4 @@
-import 'package:flutter_toolbox/models/question.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/models/question.dart';
 
 class QuizBrain {
   int _questionNumber = 0;

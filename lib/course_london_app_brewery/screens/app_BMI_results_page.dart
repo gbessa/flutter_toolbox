@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/screens/course/BMI_input_page.dart';
 
-import 'constants.dart';
+import '../constants.dart';
+import 'app_BMI_input_page.dart';
 
 class BMIResultsPage extends StatelessWidget {
   BMIResultsPage(

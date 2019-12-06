@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/models/story_brain.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/models/story_brain.dart';
 
 void main() => runApp(Destini());
 

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/screens/clones/clone_messenger.dart';
-
-import '../course/app_dicee.dart';
+import 'clone_messenger.dart';
 
 void main() {
   runApp(

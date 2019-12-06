@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_toolbox/screens/clones/clone_messenger.dart';
-import 'package:flutter_toolbox/screens/course/app_BMI_calculator.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/screens/app_clima.dart';
 
-import 'app_destini.dart';
-import 'app_dicee.dart';
-import 'app_quiz.dart';
-import 'app_xylophone.dart';
+import 'screens/app_destini.dart';
+import 'screens/app_dicee.dart';
+import 'screens/app_quiz.dart';
+import 'screens/app_xylophone.dart';
+import 'screens/app_BMI_calculator.dart';
 
 void main() {
   runApp(
@@ -84,6 +84,21 @@ class CourseAppsScreen extends StatelessWidget {
                     TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
               ),
               color: Colors.purple,
+              splashColor: Colors.blueGrey,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ClimaApp()),
+                );
+              },
+              child: Text(
+                'CLIMA',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.lightBlueAccent,
               splashColor: Colors.blueGrey,
             ),
           ],
