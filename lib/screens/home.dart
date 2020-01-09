@@ -160,7 +160,7 @@ class _HomeState extends State<Home> {
         floatingActionButton: FloatingActionButton.extended(
           heroTag:
               "add", // Serve para usar mais de 1 floatingActionButton na tela
-          label: Text('Add'),
+          label: Text('floatingActionButton'),
           icon: Icon(Icons.add),
           backgroundColor: Colors.blueAccent, onPressed: () {},
         ));

@@ -6,8 +6,9 @@ import 'package:flutter_toolbox/models/post.dart';
 import 'package:http/http.dart' as http;
 
 Future<Post> fetchPost() async {
+  final url = 'https://jsonplaceholder.typicode.com/posts/1';
   final response =
-      await http.get('https://jsonplaceholder.typicode.com/posts/1');
+      await http.get(url);
 
   if (response.statusCode == 200) {
     // If the call to the server was successful, parse the JSON.
@@ -44,12 +45,17 @@ class _HttpFetchScreenState extends State<HttpFetchScreen> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: Center(
+        child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+          Center(child:
+            Text('HTTP GET from: https://jsonplaceholder.typicode.com/posts/1'),
+          ),
+          Center(
           child: FutureBuilder<Post>(
             future: post,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                return Text(snapshot.data.title);
+                return Text("Id: ${snapshot.data.id};\nTitle: ${snapshot.data.title};\nBody: ${snapshot.data.body};");
               } else if (snapshot.hasError) {
                 return Text("${snapshot.error}");
               }
@@ -57,7 +63,9 @@ class _HttpFetchScreenState extends State<HttpFetchScreen> {
               // By default, show a loading spinner.
               return CircularProgressIndicator();
             },
-          ),
+          )),
+        ],
+
         ),
       ),
     );
