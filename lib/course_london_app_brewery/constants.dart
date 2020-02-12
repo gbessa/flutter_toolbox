@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:flutter_toolbox/course_london_app_brewery/screens/app_clima.dart';
+import 'package:flutter/material.dart';
 
 //BMI
 const kActiveCardColor = Color(0xFF1D1E33);
@@ -22,3 +22,19 @@ const kButtonTextStyleSize = 30.0;
 const kButtonTextStyleFamily = 'Spartan MB';
 
 const kConditionTextStyleSize = 100.0;
+
+const kTextFieldInputDecoration = InputDecoration(
+  filled: true,
+  fillColor: Colors.white,
+  icon: Icon(
+    Icons.location_city,
+    color: Colors.white,
+  ),
+  hintText: 'Enter City Name',
+  hintStyle: TextStyle(color: Colors.grey),
+  border: OutlineInputBorder(
+      borderRadius: BorderRadius.all(
+        Radius.circular(10.0),
+      ),
+      borderSide: BorderSide.none),
+);

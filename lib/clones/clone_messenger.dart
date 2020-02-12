@@ -29,7 +29,7 @@ class CloneMessengerScreen extends StatelessWidget {
 }
 
 class CloneMessenger extends StatelessWidget {
-  List<String> profilePics = [
+  final List<String> profilePics = [
     "1.jpg",
     "2.jpg",
     "3.jpg",
@@ -68,6 +68,7 @@ class CloneMessenger extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Color.fromRGBO(51, 51, 51, 1),
             child: IconButton(
+              onPressed: () {},
               icon: Icon(
                 Icons.photo_camera,
                 size: 22,
@@ -81,6 +82,7 @@ class CloneMessenger extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Color.fromRGBO(51, 51, 51, 1),
             child: IconButton(
+              onPressed: () {},
               icon: Icon(
                 Icons.edit,
                 size: 22,
@@ -146,11 +148,12 @@ class CloneMessenger extends StatelessWidget {
                             child: ClipOval(
                               child: (index == 0)
                                   ? IconButton(
+                                      onPressed: () {},
                                       icon: Icon(
-                                      Icons.add,
-                                      size: 30,
-                                      color: Color.fromRGBO(195, 195, 195, 1),
-                                    ))
+                                        Icons.add,
+                                        size: 30,
+                                        color: Color.fromRGBO(195, 195, 195, 1),
+                                      ))
                                   : Image.asset(
                                       "assets/images/profile-pics/${profilePics[index]}"),
                             ),
@@ -270,6 +273,7 @@ class CloneMessenger extends StatelessWidget {
                   height: 40,
                   width: 40,
                   child: IconButton(
+                    onPressed: () {},
                     icon: Image.asset(
                       "assets/images/profile-pics/mmessage.png",
                       fit: BoxFit.fitHeight,
@@ -304,6 +308,7 @@ class CloneMessenger extends StatelessWidget {
               height: 40,
               width: 40,
               child: IconButton(
+                onPressed: () {},
                 icon: Image.asset(
                   "assets/images/profile-pics/people.png",
                   fit: BoxFit.fitHeight,
@@ -314,6 +319,7 @@ class CloneMessenger extends StatelessWidget {
               height: 40,
               width: 40,
               child: IconButton(
+                onPressed: () {},
                 icon: Image.asset(
                   "assets/images/profile-pics/navigation.png",
                   fit: BoxFit.fitHeight,

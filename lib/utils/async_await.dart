@@ -32,7 +32,9 @@ Future<int> getTotal(Stream<int> numbers) async {
 class ProcessedData {
   ProcessedData(data);
 
-  static Future<ProcessedData> empty() async {}
+  static Future<ProcessedData> empty() async {
+    return null;
+  }
 }
 
 _fetchNetworkData(id) {}

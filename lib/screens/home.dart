@@ -145,10 +145,6 @@ class _HomeState extends State<Home> {
     );
   }
 
-  _search() {
-    print("------ Search !! ------");
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
