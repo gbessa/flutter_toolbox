@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/screens/app_bitcoin.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/screens/app_clima.dart';
 
 import 'screens/app_destini.dart';
@@ -100,6 +101,21 @@ class CourseAppsScreen extends StatelessWidget {
               ),
               color: Colors.lightBlueAccent,
               splashColor: Colors.blueGrey,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => BitcoinApp()),
+                );
+              },
+              child: Text(
+                'Bitcoin Ticker',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.green,
+              splashColor: Colors.greenAccent,
             ),
           ],
         ),
