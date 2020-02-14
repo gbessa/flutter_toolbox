@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/components/chat_basic_buttom.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/components/chat_email_text_field.dart';
@@ -15,7 +16,7 @@ class RegistrationScreen extends StatefulWidget {
 class _RegistrationScreenState extends State<RegistrationScreen> {
   String email;
   String password;
-  //final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +73,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               onPressed: () async {
                 print(email);
                 print(password);
-                /*try {
+                try {
                   final newUser = await _auth.createUserWithEmailAndPassword(
                       email: email, password: password);
                   if (newUser != null) {
@@ -80,7 +81,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   }
                 } catch (e) {
                   print(e);
-                }*/
+                }
               },
             ),
           ],
