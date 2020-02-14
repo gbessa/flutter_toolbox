@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/screens/app_CHAT.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/screens/app_bitcoin.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/screens/app_clima.dart';
 
@@ -116,6 +117,21 @@ class CourseAppsScreen extends StatelessWidget {
               ),
               color: Colors.green,
               splashColor: Colors.greenAccent,
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FlashChat()),
+                );
+              },
+              child: Text(
+                'Chat',
+                style:
+                    TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.grey,
+              splashColor: Colors.black,
             ),
           ],
         ),
