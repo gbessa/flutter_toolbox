@@ -65,6 +65,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () async {
                   setState(() {
                     showSpinner = true;
+                    email = 'gbvirtual@gmail.com';
+                    password = '123456';
                   });
                   try {
                     final user = await _auth.signInWithEmailAndPassword(
