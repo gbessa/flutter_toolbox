@@ -32,11 +32,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 200.0,
-                  child: Image.asset('assets/images/app_chat_logo.png'),
+              Flexible(
+                //Pulo do gato (Flexible) para não estourar qdo abre o teclado
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 200.0,
+                    child: Image.asset('assets/images/app_chat_logo.png'),
+                  ),
                 ),
               ),
               Center(
