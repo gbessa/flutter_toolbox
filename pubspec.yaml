@@ -44,6 +44,9 @@ dependencies:
 
   modal_progress_hud: ^0.1.3
 
+  #State Management
+  provider: ^3.0.4
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

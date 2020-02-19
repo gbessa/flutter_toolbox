@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/components/todoey_tasks_list.dart';
+import 'package:flutter_toolbox/course_london_app_brewery/models/task_data.dart';
 import 'package:flutter_toolbox/course_london_app_brewery/screens/app_TODOEY_add_task_screen.dart';
+import 'package:provider/provider.dart';
 
-class TaskScreen extends StatefulWidget {
-  @override
-  _TaskScreenState createState() => _TaskScreenState();
-}
-
-class _TaskScreenState extends State<TaskScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +36,7 @@ class _TaskScreenState extends State<TaskScreen> {
                       fontWeight: FontWeight.w700),
                 ),
                 Text(
-                  '12 tasks',
+                  '${Provider.of<TaskData>(context).taskCount} tasks',
                   style: TextStyle(color: Colors.white, fontSize: 18.0),
                 ),
               ],
