@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/utils/camera_example.dart';
+import 'package:flutter_toolbox/utils/dialogs.dart';
 import 'http_fetch.dart';
 import 'take_picture.dart';
 import 'web_socket.dart';
@@ -53,6 +55,41 @@ class UtilsScreen extends StatelessWidget {
                   },
                   child: Text('Take Picture'),
                   color: Colors.yellowAccent,
+                  splashColor: Colors.blue,
+                ),
+              ],
+            ),
+            SizedBox(height: 8.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => DialogsScreen()),
+                    );
+                  },
+                  child: Text('Dialogs'),
+                  color: Colors.blueGrey,
+                  splashColor: Colors.blue,
+                ),
+              ],
+            ),
+            SizedBox(height: 8.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CameraExampleHome()),
+                    );
+                  },
+                  child: Text('Camera Example'),
+                  color: Colors.white70,
                   splashColor: Colors.blue,
                 ),
               ],

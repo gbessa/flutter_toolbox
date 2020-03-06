@@ -22,7 +22,8 @@ dependencies:
 
   path_provider:          # Para acessar as pastas temp e de documentos da aplicação
   http:                   # Para acessar APIs
-  camera:                 # Para acessar a(s) cameras
+  camera: ^0.5.7+4
+  video_player: ^0.10.8+1
   web_socket_channel:
   bloc_pattern: ^2.5.1
   rxdart: ^0.22.6

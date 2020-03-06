@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_toolbox/configs/AppColors.dart';
 import 'package:flutter_toolbox/ideas/ideas.dart';
 import 'package:flutter_toolbox/screens/bloc_screen.dart';
 import 'package:flutter_toolbox/screens/provider_screen.dart';
@@ -161,7 +162,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        appBar: AppBar(title: Text('Home of Flutter Tools')),
+        appBar: AppBar(
+          title: Text('Home of Flutter Tools'),
+          backgroundColor: AppColors.appBar,
+        ),
         body: Center(
           child: _buildCard(),
         ),

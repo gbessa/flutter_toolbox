@@ -46,6 +46,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
     super.initState();
     // To display the current output from the Camera,
     // create a CameraController.
+    print('init CameraController');
     _controller = CameraController(
       // Get a specific camera from the list of available cameras.
       widget.camera,
@@ -90,6 +91,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
           // Take the Picture in a try / catch block. If anything goes wrong,
           // catch the error.
           try {
+            print('Clicked!!');
             // Ensure that the camera is initialized.
             await _initializeControllerFuture;
 
@@ -101,6 +103,8 @@ class TakePictureScreenState extends State<TakePictureScreen> {
               (await getTemporaryDirectory()).path,
               '${DateTime.now()}.png',
             );
+
+            print(path);
 
             // Attempt to take a picture and log where it's been saved.
             await _controller.takePicture(path);
