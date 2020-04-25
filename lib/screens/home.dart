@@ -3,8 +3,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/configs/AppColors.dart';
 import 'package:flutter_toolbox/ideas/ideas.dart';
-import 'package:flutter_toolbox/screens/bloc_screen.dart';
-import 'package:flutter_toolbox/screens/provider_screen.dart';
+import 'package:flutter_toolbox/state_management/bloc_screen.dart';
+import 'package:flutter_toolbox/state_management/provider_screen.dart';
+import 'package:flutter_toolbox/state_management/state_management.dart';
 import 'package:flutter_toolbox/widgets/new_widget.dart';
 import 'package:flutter_toolbox/widgets/screen_widget.dart';
 import 'package:flutter_toolbox/widgets/search_bar.dart';
@@ -101,23 +102,13 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BlocScreen()),
+                  MaterialPageRoute(
+                      builder: (context) => StateManagementScreen()),
                 );
               },
-              child: Text('Bloc'),
+              child: Text('State Management'),
               color: Colors.orange,
               splashColor: Colors.orangeAccent,
-            ),
-            RaisedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProviderScreen()),
-                );
-              },
-              child: Text('Provider'),
-              color: Colors.orangeAccent,
-              splashColor: Colors.orange,
             ),
           ],
         ),

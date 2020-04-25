@@ -47,6 +47,8 @@ dependencies:
 
   #State Management
   provider: ^3.0.4
+  mobx: ^1.1.1
+  flutter_mobx: ^1.1.0
 
 dev_dependencies:
   flutter_test:
