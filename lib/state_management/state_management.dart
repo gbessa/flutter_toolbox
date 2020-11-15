@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_toolbox/state_management/bloc_screen.dart';
 import 'package:flutter_toolbox/state_management/provider_screen.dart';
 import 'package:flutter_toolbox/state_management/state_mobx_screen.dart';
+import 'package:flutter_toolbox/state_management/state_mobx_simple_screen_.dart';
 
 void main() {
   runApp(
@@ -60,6 +61,18 @@ class StateManagementScreen extends StatelessWidget {
                     },
                     child: Text('MobX'),
                     color: Colors.blueAccent,
+                    splashColor: Colors.blue,
+                  ),
+                  RaisedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => StateMobxSimpleScreen()),
+                      );
+                    },
+                    child: Text('MobX Simple'),
+                    color: Colors.lightBlue,
                     splashColor: Colors.blue,
                   ),
                 ],
